@@ -1,52 +1,307 @@
-
 {%extends "base/main.html"%}
 {%load static%}
 
 {% block title %}
-Home | Ayroot
+<title> Home | Ayroot </title>
 {%endblock%}
 
-{% block head_nav %}
-<div class="navbar-sec ">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-cusom px-5">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AyRoot</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Category</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Froum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">DMCA</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</div>
-
-{% endblock %}
+{%block header%}
+{%include "base/header.html"%}
+{%endblock%}
 
 {% block body %}
-<div class="anal">hello</div>
+<!-- Category section -->
+<div class="container bg-custom shadow-sm mt-4">
+  <row class="col-12">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button"
+          role="tab" aria-controls="movie" aria-selected="true">Movies</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+          aria-controls="tv" aria-selected="false">TV Shows</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab"
+          aria-controls="music" aria-selected="false">Music</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="mag-tab" data-bs-toggle="tab" data-bs-target="#mag" type="button" role="tab"
+          aria-controls="mag" aria-selected="false">Magazines</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="game-tab" data-bs-toggle="tab" data-bs-target="#game" type="button" role="tab"
+          aria-controls="game" aria-selected="false">Games</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab"
+          aria-controls="app" aria-selected="false">Applications</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="movie" role="tabpanel" aria-labelledby="movie-tab">
+        {%include 'theme/slick_slider.html'%}
+      </div>
+      <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
+        {%include 'theme/slick_slider.html'%}
+      </div>
+      <div class="tab-pane fade" id="music" role="tabpanel" aria-labelledby="music-tab">
+        {%include 'theme/slick_slider.html'%}
+      </div>
+      <div class="tab-pane fade" id="mag" role="tabpanel" aria-labelledby="mag-tab">
+        {%include 'theme/slick_slider.html'%}
+      </div>
+      <div class="tab-pane fade" id="game" role="tabpanel" aria-labelledby="game-tab">
+        {%include 'theme/slick_slider.html'%}
+      </div>
+      <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+        {%include 'theme/slick_slider.html'%}
+      </div>
+    </div>
+
+  </row>
+</div>
+<!-- end -->
+
+<!-- live release -->
+<div class="container bg-custom shadow-sm py-2 px-3 mt-4">
+  <p class="h3"><a class="text-decoration-none" href="#">Live releases</a></p>
+
+
+  <div class="row">
+    <div class="col-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
+    <div class="col-11 p-0"><a class="rls-style" href="">Jimmy.Fallon.2021.09.13.Andrew.Garfield.1080p.WEB.H264-GLHF</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
+    <div class="col-11 p-0"><a class="rls-style"
+        href="">Selling.Irelands.Most.Exclusive.Homes.S01E02.1080p.RTE.WEB-DL.x264-RTN</a></div>
+  </div>
+
+  <div class="row">
+    <div class="col-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
+    <div class="col-11 p-0"><a class="rls-style" href="">Almost.Never.S03.720p.IP.WEB-DL.AAC2.0.H.264-DarkSaber</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-1 p-0 text-center"><span class="badge badge-danger">Movie</span></div>
+    <div class="col-11 p-0"><a class="rls-style" href="">The.Witnesses.S01.720p.WEB.H264-NGP</a></div>
+  </div>
+
+  <div class="row">
+    <div class="col-1 p-0 text-center"><span class="badge badge-danger">Application</span></div>
+    <div class="col-11 p-0"><a class="rls-style" href="">Monster Couch, Stonemaier Games, indienova</a></div>
+  </div>
+
+  <div class="row">
+    <div class="col-1 p-0 text-center"><span class="badge badge-danger">Game</span></div>
+    <div class="col-11 p-0"><a class="rls-style" href="">Dreadlands.v2.28-CODEX</a></div>
+  </div>
+
+
+</div>
+<!-- end -->
+
+<!-- single post and sidebar -->
+<div class="container  shadow-sm mt-4">
+  <div class="row">
+    <!-- single post -->
+    <div class="col-7">
+      <!-- post area -->
+      <div class="container bg-custom p-0">
+        <div class="card card-custom mb-3">
+          <div class="card-header">
+            <span class="post-title">
+              <h6 class="mb-0 "><a class="link_style text-decoration-none"
+                  href="#">Star.Trek.IV.The.Voyage.Home.1986.MULTi.2160p.UHD.BluRay.x265-SESKAPiLE</a></h6>
+            </span>
+
+
+          </div>
+          <div class="card-body pt-1">
+            <div class="row mb-4 card-hashtags text-muted">
+              <div class="col-12">
+                <span class="post-date small mx-2"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                  September 15th, 2021 16:07 </span>
+                <span class="">#tv_show</span>
+                <span class="h-tags">#hdtv</span>
+              </div>
+            </div>
+            <div class="row post-content mt-2">
+              <div class="col-3"><img src="{%static 'covers/Cover1.png'%}" alt=""></div>
+              <div class="col-9">
+                <div class="row">
+                  <div class="col-12">
+                    <span class="fw-bold">Pilot:</span>
+                    <p class="d-inline">Followed by millions worldwide. His strong will and triumphant fight to win
+                      against all odds put Michael Schumacher at the centre of global attention.
+                      <span id="dots">...</span>
+                      <span id="more"> Michael Schumacher’s
+                        journey has capturedthe imagination of millions, but there is a lot more than motor racing to
+                        the
+                        success of this very
+                        private man. However, it is not only his fighting spirit and striving for perfection that define
+                        Michael Schumacher as a person; his self-doubt and insecurities complete the picture of a
+                        sensitive and reflected man. At the heart of Michael’s story are his parents, his children and
+                        Corinna
+                        Schumacher, his childhood sweetheart and the love of his life. They are now ready to tell his
+                        story.</span>
+                    </p><a class="text-primary" onclick="myFunction()" id="myBtn">Read more</a>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3"><span class="text-warning">iMDB: </span><span>9.8/10</span></div>
+                  <div class="col-3">
+                    <span class="text-danger">Trailer: </span>
+                    <span><a class="link_style" href="#">YouTube</a></span>
+                  </div>
+                  <div class="col-3"><span></span><span></span></div>
+                  <div class="col-3"><span></span><span></span></div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <span class="fw-bold">Gener: </span>
+                    <span>
+                      <a class="link_style text-decoration-none" href="#">Action</a>,
+                      <a class="link_style text-decoration-none" href="#">Documentry</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <span class="fw-bold">Director: </span>
+                    <span>
+                      <a class="link_style text-decoration-none" href="#">Cristopher Nolan</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="row mt-2 ">
+                  <div class="col-12">
+                    <span class="fw-bold">Stars: </span>
+                    <span>
+                      <a class="link_style text-decoration-none" href="#">Kanu Reeves</a>,
+                      <a class="link_style text-decoration-none" href="#">Johny Deep</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row download-section mt-4">
+              <div class="col-12">
+
+                <div class="row row-single-rls mt-2">
+                  <div class="release-name">
+                    <span>Release Name: </span><span>Schumacher.2021.WEBRip.x264-ION10</span>
+                  </div>
+                  <div class="info">
+                    <div><span>Size: </span> <span>1.07GB</span></div>
+                    <div><span>Video: </span><span>MP4</span></div>
+                    <div><span>Audio: </span><span>English</span></div>
+                    <div><span>Runtime: </span><span>1 h 52 min</span></div>
+                  </div>
+                  <div class="download-links">
+                    <span>Links:</span>
+                    <span><a href="#">FREE</a></span> – <span><a href="#">NiTROFLARE</a></span> – <span><a
+                        href="#">RAPiDGATOR</a></span>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row row-single-rls mt-2">
+                  <div class="release-name">
+                    <span>Release Name: </span><span>Schumacher.2021.WEBRip.x264-ION10</span>
+                  </div>
+                  <div class="info">
+                    <div><span>Size: </span> <span>1.07GB</span></div>
+                    <div><span>Video: </span><span>MP4</span></div>
+                    <div><span>Audio: </span><span>English</span></div>
+                    <div><span>Runtime: </span><span>1 h 52 min</span></div>
+                  </div>
+                  <div class="download-links">
+                    <span>Links:</span>
+                    <span><a href="#">FREE</a></span> – <span><a href="#">NiTROFLARE</a></span> – <span><a
+                        href="#">RAPiDGATOR</a></span>
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row row-single-rls mt-2">
+                  <div class="release-name">
+                    <span>Release Name: </span><span>Schumacher.2021.WEBRip.x264-ION10</span>
+                  </div>
+                  <div class="info">
+                    <div><span>Size: </span> <span>1.07GB</span></div>
+                    <div><span>Video: </span><span>MP4</span></div>
+                    <div><span>Audio: </span><span>English</span></div>
+                    <div><span>Runtime: </span><span>1 h 52 min</span></div>
+                  </div>
+                  <div class="download-links">
+                    <span>Links:</span>
+                    <span><a href="#">FREE</a></span> – <span><a href="#">NiTROFLARE</a></span> – <span><a
+                        href="#">RAPiDGATOR</a></span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">Footer</div>
+      </div>
+    </div>
+
+    <!-- TvTable sidebar -->
+    <div class="col-5 ">
+      <div class="container bg-custom p-2">
+        <ul class="nav nav-tabs" id="myTab2" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday" type="button"
+              role="tab" aria-controls="sunday" aria-selected="true">Su</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday" type="button"
+              role="tab" aria-controls="monday" aria-selected="true">Mo</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
+            <a href="#"><img src="{%static 'covers/banner.png'%}" alt=""></a>
+          </div>
+          <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+            monday
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end -->
+
+
+{%block script%}
+<script type="text/javascript">
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }</script>
+{% endblock %}
+
 {% endblock %}
