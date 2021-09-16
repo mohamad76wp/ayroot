@@ -1,8 +1,114 @@
-.bg-cusom {
-    background-color: #17191B;
+/* 
+    #202124
+    #303235
+    #86C232
+*/
+
+a {
+    color: #8ab4f8;
 }
 
+body {
+    background-color: #202124 !important;
+}
 
+.bg-custom {
+    background-color: #303235 !important;
+    color: #fff !important;
+
+}
+
+.link_style {
+    color: #fff !important;
+}
+
+.link_style:hover {
+    color: #86C232 !important;
+}
+
+.text-muted {
+    color: #c0c0c0 !important;
+}
+
+/* navbar */
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #86C232;
 }
+
+.btn-outline-custom {
+    color: #86C232 !important;
+    border-color: #86C232 !important;
+}
+
+
+.btn-outline-custom:hover {
+    color: #303235 !important;
+    background-color: #86C232 !important;
+}
+
+/* end */
+
+
+/* nav-tab */
+.nav-tabs .nav-link {
+    color: #fff !important;
+    background-color: #303235 !important;
+    border-color: #303235 #202124 #202124 #202124 !important;
+    border-radius: 0%;
+
+}
+
+.nav-tabs .nav-link.active {
+    color: #86C232 !important;
+    background-color: #202124 !important;
+    border-color: #303235 #202124 #202124 #202124 !important;
+    border-radius: 0%;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #202124 !important;
+    border-color: #303235 #202124 #202124 #202124 !important;
+    border-radius: 0%;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #202124 !important;
+}
+
+/* end */
+
+/* live release */
+.rls-style {
+    text-decoration: none;
+    color: #fff;
+}
+
+.rls-style:hover {
+    text-decoration: none;
+    color: #86C232;
+}
+
+
+.list-group-item {
+    position: relative !important;
+    display: block !important;
+    padding: .5rem 1rem !important;
+    color: #505a63 !important;
+    text-decoration: none !important;
+    background-color: #303235 !important;
+    border: 1px solid rgb(255 255 255 / 13%) !important;
+}
+
+/* end */
+
+/* single post and sidebar  */
+.card-custom {
+    word-wrap: break-word;
+    background-color: #303235;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem
+}
+
+
+/* end */
