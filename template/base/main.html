@@ -1,22 +1,47 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    {%block head%}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/style.css">
-    {% block css %}{% endblock %}
-    <title>{% block title %}{% endblock %}</title>
-    {%endblock%}
-</head>
-<body>
-    {% block head_nav %}{% endblock %}
-    {% block body %}{% endblock %}
 
-    <script src="/static/js/bootstrap.bundle.min.js"></script>
-    {% block script %}{% endblock %}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/css-awesome/font-awesome.css">
+
+    <link rel="stylesheet" href="/static/slick/slick.css">
+    <link rel="stylesheet" href="/static/slick/slick-theme.css">
+    <link rel="stylesheet" href="/static/slick/slick-style.css">
+
+
+
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    {% block header %}
+    {% include 'base/header.html' %}
+    {% endblock %}
+
+    {% block body %}
+
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    <script src="/static/slick/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    {% block javascript %}{% endblock %}
+
+
 </body>
+
 </html>

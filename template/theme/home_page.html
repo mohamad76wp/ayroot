@@ -1,123 +1,143 @@
-{%extends "base/main.html"%}
-{%load static%}
+{% extends 'base/main.html' %}
+{% load static %}
 
 {% block title %}
-<title> Home | Ayroot </title>
-{%endblock%}
+Home | Ayroot
+{% endblock %}
 
-{%block header%}
-{%include "base/header.html"%}
-{%endblock%}
 
 {% block body %}
-<!-- Category section -->
+<!-- CATEGORY AND SLIDER -->
 <div class="container bg-custom shadow-sm mt-4">
-  <row class="col-12">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button"
-          role="tab" aria-controls="movie" aria-selected="true">Movies</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
-          aria-controls="tv" aria-selected="false">TV Shows</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab"
-          aria-controls="music" aria-selected="false">Music</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="mag-tab" data-bs-toggle="tab" data-bs-target="#mag" type="button" role="tab"
-          aria-controls="mag" aria-selected="false">Magazines</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="game-tab" data-bs-toggle="tab" data-bs-target="#game" type="button" role="tab"
-          aria-controls="game" aria-selected="false">Games</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab"
-          aria-controls="app" aria-selected="false">Applications</button>
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-12">
 
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="movie" role="tabpanel" aria-labelledby="movie-tab">
-        {%include 'theme/slick_slider.html'%}
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button"
+            role="tab" aria-controls="movie" aria-selected="true">
+            Movies
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+            aria-controls="tv" aria-selected="true">
+            TV Shows
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab"
+            aria-controls="music" aria-selected="true">
+            Music
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="mag-tab" data-bs-toggle="tab" data-bs-target="#mag" type="button" role="tab"
+            aria-controls="mag" aria-selected="true">
+            Magazines
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="game-tab" data-bs-toggle="tab" data-bs-target="#game" type="button" role="tab"
+            aria-controls="game" aria-selected="true">
+            Games
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab"
+            aria-controls="app" aria-selected="true">
+            Applications
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="movie" role="tabpanel" aria-labelledby="movie-tab">
+          {%include 'theme/slick_slider.html'%}
+        </div>
+        <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
+          {%include 'theme/slick_slider.html'%}
+        </div>
+        <div class="tab-pane fade" id="music" role="tabpanel" aria-labelledby="music-tab">
+          {%include 'theme/slick_slider.html'%}
+        </div>
+        <div class="tab-pane fade" id="mag" role="tabpanel" aria-labelledby="mag-tab">
+          {%include 'theme/slick_slider.html'%}
+        </div>
+        <div class="tab-pane fade" id="game" role="tabpanel" aria-labelledby="game-tab">
+          {%include 'theme/slick_slider.html'%}
+        </div>
+        <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+          {%include 'theme/slick_slider.html'%}
+        </div>
       </div>
-      <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
-        {%include 'theme/slick_slider.html'%}
-      </div>
-      <div class="tab-pane fade" id="music" role="tabpanel" aria-labelledby="music-tab">
-        {%include 'theme/slick_slider.html'%}
-      </div>
-      <div class="tab-pane fade" id="mag" role="tabpanel" aria-labelledby="mag-tab">
-        {%include 'theme/slick_slider.html'%}
-      </div>
-      <div class="tab-pane fade" id="game" role="tabpanel" aria-labelledby="game-tab">
-        {%include 'theme/slick_slider.html'%}
-      </div>
-      <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
-        {%include 'theme/slick_slider.html'%}
-      </div>
+
     </div>
-
-  </row>
+  </div>
 </div>
 <!-- end -->
 
-<!-- live release -->
+<!-- LIVE RELEASE -->
 <div class="container bg-custom shadow-sm py-2 px-3 mt-4">
-  <p class="h3"><a class="text-decoration-none" href="#">Live releases</a></p>
-
-
   <div class="row">
-    <div class="col-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
-    <div class="col-11 p-0"><a class="rls-style" href="">Jimmy.Fallon.2021.09.13.Andrew.Garfield.1080p.WEB.H264-GLHF</a>
+    <div class="col-12">
+      <p class="h3"><a class="text-decoration-none" href="#">Live releases</a></p>
+
+
+      <div class="row">
+        <div class="col-3 col-lg-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
+        <div class="col-9 col-lg-11 text-break p-0"><a class="rls-style"
+            href="">Jimmy.Fallon.2021.09.13.Andrew.Garfield.1080p.WEB.H264-GLHF</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 col-lg-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
+        <div class="col-9 col-lg-11 text-break p-0"><a class="rls-style"
+            href="">Selling.Irelands.Most.Exclusive.Homes.S01E02.1080p.RTE.WEB-DL.x264-RTN</a></div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 col-lg-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
+        <div class="col-9 col-lg-11 text-break p-0"><a class="rls-style"
+            href="">Almost.Never.S03.720p.IP.WEB-DL.AAC2.0.H.264-DarkSaber</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 col-lg-1 p-0 text-center"><span class="badge badge-danger">Movie</span></div>
+        <div class="col-9 col-lg-11 text-break p-0"><a class="rls-style" href="">The.Witnesses.S01.720p.WEB.H264-NGP</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 col-lg-1 p-0 text-center"><span class="badge badge-danger">Application</span></div>
+        <div class="col-9 col-lg-11 text-break p-0"><a class="rls-style" href="">Monster Couch, Stonemaier Games,
+            indienova</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 col-lg-1 p-0 text-center"><span class="badge badge-danger">Game</span></div>
+        <div class="col-9 col-lg-11 text-break p-0"><a class="rls-style" href="">Dreadlands.v2.28-CODEX</a></div>
+      </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
-    <div class="col-11 p-0"><a class="rls-style"
-        href="">Selling.Irelands.Most.Exclusive.Homes.S01E02.1080p.RTE.WEB-DL.x264-RTN</a></div>
-  </div>
-
-  <div class="row">
-    <div class="col-1 p-0 text-center"><span class="badge badge-danger">TvShow</span></div>
-    <div class="col-11 p-0"><a class="rls-style" href="">Almost.Never.S03.720p.IP.WEB-DL.AAC2.0.H.264-DarkSaber</a>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-1 p-0 text-center"><span class="badge badge-danger">Movie</span></div>
-    <div class="col-11 p-0"><a class="rls-style" href="">The.Witnesses.S01.720p.WEB.H264-NGP</a></div>
-  </div>
-
-  <div class="row">
-    <div class="col-1 p-0 text-center"><span class="badge badge-danger">Application</span></div>
-    <div class="col-11 p-0"><a class="rls-style" href="">Monster Couch, Stonemaier Games, indienova</a></div>
-  </div>
-
-  <div class="row">
-    <div class="col-1 p-0 text-center"><span class="badge badge-danger">Game</span></div>
-    <div class="col-11 p-0"><a class="rls-style" href="">Dreadlands.v2.28-CODEX</a></div>
-  </div>
-
 
 </div>
 <!-- end -->
 
-<!-- single post and sidebar -->
-<div class="container  shadow-sm mt-4">
-  <div class="row">
+<!-- SINGLE POST -->
+<div class="container px-0 shadow-sm mt-4">
+  <div class="row d-flex flex-column-reverse flex-lg-row">
     <!-- single post -->
-    <div class="col-7">
+    <div class="col-12 col-lg-7">
       <!-- post area -->
       <div class="container bg-custom p-0">
         <div class="card card-custom mb-3">
           <div class="card-header">
             <span class="post-title">
-              <h6 class="mb-0 "><a class="link_style text-decoration-none"
+              <h6 class="mb-0 p-2 "><a class="link_style text-decoration-none"
                   href="#">Star.Trek.IV.The.Voyage.Home.1986.MULTi.2160p.UHD.BluRay.x265-SESKAPiLE</a></h6>
             </span>
 
@@ -132,9 +152,10 @@
                 <span class="h-tags">#hdtv</span>
               </div>
             </div>
-            <div class="row post-content mt-2">
-              <div class="col-3"><img src="{%static 'covers/Cover1.png'%}" alt=""></div>
-              <div class="col-9">
+            <div class="row post-content d-flex flex-column flex-lg-row mt-2">
+              <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center"><img class="img-fluid"
+                  src="{%static 'covers/Cover1.png'%}" alt=""></div>
+              <div class="col-12 col-lg-9">
                 <div class="row">
                   <div class="col-12">
                     <span class="fw-bold">Pilot:</span>
@@ -145,13 +166,14 @@
                         journey has capturedthe imagination of millions, but there is a lot more than motor racing to
                         the
                         success of this very
-                        private man. However, it is not only his fighting spirit and striving for perfection that define
+                        private man. However, it is not only his fighting spirit and striving for perfection that
+                        define
                         Michael Schumacher as a person; his self-doubt and insecurities complete the picture of a
                         sensitive and reflected man. At the heart of Michael’s story are his parents, his children and
                         Corinna
                         Schumacher, his childhood sweetheart and the love of his life. They are now ready to tell his
                         story.</span>
-                    </p><a class="text-primary" onclick="myFunction()" id="myBtn">Read more</a>
+                    </p><a class="" onclick="myFunction()" id="myBtn">Read more</a>
                   </div>
                 </div>
                 <div class="row mt-2">
@@ -251,29 +273,49 @@
             </div>
           </div>
         </div>
-        <div class="card-footer">Footer</div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-6">Comments:30</div>
+            <div class="col-6 d-flex justify-content-end"><a href="#">View Post ></a></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- TvTable sidebar -->
-    <div class="col-5 ">
-      <div class="container bg-custom p-2">
-        <ul class="nav nav-tabs" id="myTab2" role="tablist">
+    <!-- TV TABLE SIDEBAR -->
+    <div class="col-12 col-lg-5 mb-5">
+      <div class="container bg-custom p-0">
+        <ul class="nav nav-tabs mx-2" id="myTab2" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday" type="button"
-              role="tab" aria-controls="sunday" aria-selected="true">Su</button>
+              role="tab" aria-controls="sunday" aria-selected="true">Sun</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday" type="button"
-              role="tab" aria-controls="monday" aria-selected="true">Mo</button>
+            <button class="nav-link" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday" type="button"
+              role="tab" aria-controls="monday" aria-selected="true">Mon</button>
           </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content p-2" id="myTabContent2">
           <div class="tab-pane fade show active" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
-            <a href="#"><img src="{%static 'covers/banner.png'%}" alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banber7.png'%}"
+                alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner2.png'%}"
+                alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner6.png'%}"
+                alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner8.png'%}"
+                alt=""></a>
           </div>
-          <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="monday-tab">
-            monday
+          <div class="tab-pane fade" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner2.png'%}"
+                alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner3.png'%}"
+                alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner4.png'%}"
+                alt=""></a>
+            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner5.png'%}"
+                alt=""></a>
+
           </div>
 
         </div>
@@ -283,9 +325,10 @@
   </div>
 </div>
 <!-- end -->
+{% endblock %}
 
-
-{%block script%}
+{% block javascript %}
+<!-- PILOT REDMORE BUTTON -->
 <script type="text/javascript">
   function myFunction() {
     var dots = document.getElementById("dots");
@@ -302,6 +345,25 @@
       moreText.style.display = "inline";
     }
   }</script>
-{% endblock %}
+<!-- end -->
 
+<!-- SLICK SLIDER -->
+
+<script src="/static/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).on('ready', function () {
+    $(".regular").slick({
+      dots: false,
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+
+    });
+    $(".lazy").slick({
+      lazyLoad: 'ondemand', // ondemand progressive anticipated
+      infinite: true
+    });
+  });
+</script>
+<!-- end -->
 {% endblock %}
