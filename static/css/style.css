@@ -4,6 +4,16 @@
     #86C232
 */
 
+#more {
+    /* pilot readmore button*/
+    display: none;
+}
+
+#myBtn {
+    color: #86C232;
+}
+
+
 a {
     color: #8ab4f8;
 }
@@ -102,6 +112,13 @@ body {
 /* end */
 
 /* single post and sidebar  */
+.card-header {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
 .card-custom {
     word-wrap: break-word;
     background-color: #303235;
