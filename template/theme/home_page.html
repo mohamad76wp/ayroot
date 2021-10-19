@@ -10,68 +10,94 @@ Home | Ayroot
 <!-- CATEGORY AND SLIDER -->
 <div class="container bg-custom shadow-sm mt-4">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 d-flex justify-content-around">
+      <div>
+        <ul class="nav nav-tabs mx-2" id="myTab2" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="movies-tab" data-bs-toggle="tab" data-bs-target="#movies" type="button"
+              role="tab" aria-controls="monday" aria-selected="true">Movies</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="sunday-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+              aria-controls="tv" aria-selected="true">TV Shows</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button"
+              role="tab" aria-controls="music" aria-selected="true">Music</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="mag-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+              aria-controls="mag" aria-selected="true">Magazines</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="game-tab" data-bs-toggle="tab" data-bs-target="#game" type="button" role="tab"
+              aria-controls="game" aria-selected="true">Games</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="sunday-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+              aria-controls="tv" aria-selected="true">Applications</button>
+          </li>
+        </ul>
+        <div class="tab-content p-2" id="myTabContent2">
+          <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="movie-tab">
+            <img class="img-fluid" src="{%static 'covers/Cover1.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover2.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover3.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover4.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover6.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover7.png'%}" alt="">
 
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button"
-            role="tab" aria-controls="movie" aria-selected="true">
-            Movies
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
-            aria-controls="tv" aria-selected="true">
-            TV Shows
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab"
-            aria-controls="music" aria-selected="true">
-            Music
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="mag-tab" data-bs-toggle="tab" data-bs-target="#mag" type="button" role="tab"
-            aria-controls="mag" aria-selected="true">
-            Magazines
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="game-tab" data-bs-toggle="tab" data-bs-target="#game" type="button" role="tab"
-            aria-controls="game" aria-selected="true">
-            Games
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab"
-            aria-controls="app" aria-selected="true">
-            Applications
-          </button>
-        </li>
-      </ul>
+          </div>
+          <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tuesday-tab">
+            <img class="img-fluid" src="{%static 'covers/Cover8.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover9.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover4.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover1.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover11.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover7.png'%}" alt="">
+          </div>
+          <div class="tab-pane fade" id="music" role="tabpanel" aria-labelledby="wednesday-tab">
+            <img class="img-fluid" src="{%static 'covers/Cover10.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover12.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover3.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover8.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover2.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover7.png'%}" alt="">
+          </div>
+          <div class="tab-pane fade" id="mag" role="tabpanel" aria-labelledby="thursday-tab">
+            <img class="img-fluid" src="{%static 'covers/Cover2.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover8.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover12.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover1.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover3.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover6.png'%}" alt="">
+          </div>
+          <div class="tab-pane fade" id="game" role="tabpanel" aria-labelledby="thursday-tab">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover9.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover12.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover11.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover3.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover7.png'%}" alt="">
+          </div>
+          <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="friday-tab">
+            <img class="img-fluid" src="{%static 'covers/Cover12.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover2.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover3.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover4.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover5.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover2.png'%}" alt="">
+            <img class="img-fluid" src="{%static 'covers/Cover10.png'%}" alt="">
+          </div>
 
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="movie" role="tabpanel" aria-labelledby="movie-tab">
-          {%include 'theme/slick_slider.html'%}
-        </div>
-        <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">
-          {%include 'theme/slick_slider.html'%}
-        </div>
-        <div class="tab-pane fade" id="music" role="tabpanel" aria-labelledby="music-tab">
-          {%include 'theme/slick_slider.html'%}
-        </div>
-        <div class="tab-pane fade" id="mag" role="tabpanel" aria-labelledby="mag-tab">
-          {%include 'theme/slick_slider.html'%}
-        </div>
-        <div class="tab-pane fade" id="game" role="tabpanel" aria-labelledby="game-tab">
-          {%include 'theme/slick_slider.html'%}
-        </div>
-        <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
-          {%include 'theme/slick_slider.html'%}
+
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -284,40 +310,111 @@ Home | Ayroot
 
     <!-- TV TABLE SIDEBAR -->
     <div class="col-12 col-lg-5 mb-5">
-      <div class="container bg-custom p-0">
-        <ul class="nav nav-tabs mx-2" id="myTab2" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday" type="button"
-              role="tab" aria-controls="sunday" aria-selected="true">Sun</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday" type="button"
-              role="tab" aria-controls="monday" aria-selected="true">Mon</button>
-          </li>
-        </ul>
-        <div class="tab-content p-2" id="myTabContent2">
-          <div class="tab-pane fade show active" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banber7.png'%}"
-                alt=""></a>
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner2.png'%}"
-                alt=""></a>
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner6.png'%}"
-                alt=""></a>
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner8.png'%}"
-                alt=""></a>
-          </div>
-          <div class="tab-pane fade" id="monday" role="tabpanel" aria-labelledby="monday-tab">
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner2.png'%}"
-                alt=""></a>
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner3.png'%}"
-                alt=""></a>
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner4.png'%}"
-                alt=""></a>
-            <a href="#" class="d-flex flex-column m-2"><img class="img-fluid" src="{%static 'covers/banner5.png'%}"
-                alt=""></a>
+      <div class="container bg-custom p-0 d-flex justify-content-center">
+        <div class="none">
+          <ul class="nav nav-tabs mx-2" id="myTab2" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday"
+                type="button" role="tab" aria-controls="monday" aria-selected="true">Mon</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="tuesday-tab" data-bs-toggle="tab" data-bs-target="#tuesday" type="button"
+                role="tab" aria-controls="tuesday" aria-selected="true">Tue</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="wednesday-tab" data-bs-toggle="tab" data-bs-target="#wednesday"
+                type="button" role="tab" aria-controls="wednesday" aria-selected="true">Wed</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="thursday-tab" data-bs-toggle="tab" data-bs-target="#thursday" type="button"
+                role="tab" aria-controls="thursday" aria-selected="true">Thu</button>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="friday-tab" data-bs-toggle="tab" data-bs-target="#friday" type="button"
+                role="tab" aria-controls="friday" aria-selected="true">Fri</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="saturday-tab" data-bs-toggle="tab" data-bs-target="#saturday" type="button"
+                role="tab" aria-controls="saturday" aria-selected="true">Sat</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday" type="button"
+                role="tab" aria-controls="sunday" aria-selected="true">Sun</button>
+            </li>
+          </ul>
+          <div class="tab-content p-2" id="myTabContent2">
+            <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner2.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner3.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner4.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner5.png'%}"
+                  alt=""></a>
+
+            </div>
+            <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner3.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner5.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner4.png'%}"
+                  alt=""></a>
+            </div>
+            <div class="tab-pane fade" id="wednesday" role="tabpanel" aria-labelledby="wednesday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner2.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner4.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner5.png'%}"
+                  alt=""></a>
+            </div>
+            <div class="tab-pane fade" id="thursday" role="tabpanel" aria-labelledby="thursday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner4.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner6.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner8.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner2.png'%}"
+                  alt=""></a>
+            </div>
+            <div class="tab-pane fade" id="friday" role="tabpanel" aria-labelledby="friday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner5.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner3.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner7.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner.png'%}"
+                  alt=""></a>
+            </div>
+            <div class="tab-pane fade" id="saturday" role="tabpanel" aria-labelledby="saturday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner2.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner4.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner5.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner3.png'%}"
+                  alt=""></a>
+            </div>
+            <div class="tab-pane fade" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner7.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner2.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner6.png'%}"
+                  alt=""></a>
+              <a href="#" class="d-flex flex-column m-2"><img class="img-fluid " src="{%static 'covers/banner8.png'%}"
+                  alt=""></a>
+            </div>
 
           </div>
-
         </div>
       </div>
     </div>
