@@ -403,23 +403,4 @@ Home | Ayroot
   }</script>
 <!-- end -->
 
-<!-- SLICK SLIDER -->
-
-<script src="/static/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-  $(document).on('ready', function () {
-    $(".regular").slick({
-      dots: false,
-      infinite: true,
-      slidesToShow: 6,
-      slidesToScroll: 6,
-
-    });
-    $(".lazy").slick({
-      lazyLoad: 'ondemand', // ondemand progressive anticipated
-      infinite: true
-    });
-  });
-</script>
-<!-- end -->
 {% endblock %}
