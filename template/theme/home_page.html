@@ -154,6 +154,7 @@ Home | Ayroot
 <!-- end -->
 
 <!-- SINGLE POST -->
+{% for POST in posts %}
 <div class="container px-0 shadow-sm mt-4">
   <div class="row d-flex flex-column-reverse flex-lg-row">
     <!-- single post -->
@@ -163,8 +164,7 @@ Home | Ayroot
         <div class="card card-custom mb-3">
           <div class="card-header">
             <span class="post-title">
-              <h6 class="mb-0 p-2 "><a class="link_style text-decoration-none"
-                  href="#">Star.Trek.IV.The.Voyage.Home.1986.MULTi.2160p.UHD.BluRay.x265-SESKAPiLE</a></h6>
+              <h6 class="mb-0 p-2 "><a class="link_style text-decoration-none" href="{{POST.slug}}">{{POST.title}}</a></h6>
             </span>
 
 
@@ -172,15 +172,18 @@ Home | Ayroot
           <div class="card-body pt-1">
             <div class="row mb-4 card-hashtags text-muted">
               <div class="col-12">
-                <span class="post-date small mx-2"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                  September 15th, 2021 16:07 </span>
-                <span class="">#tv_show</span>
-                <span class="h-tags">#hdtv</span>
+                <span class="post-date small mx-2"><i class="fa fa-calendar-check-o"
+                    aria-hidden="true"></i>{{POST.create_at}} </span>
+                {% for item_cat in POST.category.all %}
+                <a href="" class="link_style text-decoration-none">
+                  <span class="">#{{item_cat}}</span>
+                </a>
+                {% endfor %}
               </div>
             </div>
             <div class="row post-content d-flex flex-column flex-lg-row mt-2">
               <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center"><img class="img-fluid"
-                  src="{%static 'covers/Cover1.png'%}" alt=""></div>
+                  src="{{MY_POST.info.cover}}" alt=""></div>
               <div class="col-12 col-lg-9">
                 <div class="row">
                   <div class="col-12">
@@ -188,25 +191,15 @@ Home | Ayroot
                     <p class="d-inline">Followed by millions worldwide. His strong will and triumphant fight to win
                       against all odds put Michael Schumacher at the centre of global attention.
                       <span id="dots">...</span>
-                      <span id="more"> Michael Schumacher’s
-                        journey has capturedthe imagination of millions, but there is a lot more than motor racing to
-                        the
-                        success of this very
-                        private man. However, it is not only his fighting spirit and striving for perfection that
-                        define
-                        Michael Schumacher as a person; his self-doubt and insecurities complete the picture of a
-                        sensitive and reflected man. At the heart of Michael’s story are his parents, his children and
-                        Corinna
-                        Schumacher, his childhood sweetheart and the love of his life. They are now ready to tell his
-                        story.</span>
+                      <span id="more">{{MY_POST.info.pilot}}</span>
                     </p><a class="" onclick="myFunction()" id="myBtn">Read more</a>
                   </div>
                 </div>
                 <div class="row mt-2">
-                  <div class="col-3"><span class="text-warning">iMDB: </span><span>9.8/10</span></div>
+                  <div class="col-3"><span class="text-warning">iMDB: </span><span>{{MY_POST.info.imdb}}/10</span></div>
                   <div class="col-3">
                     <span class="text-danger">Trailer: </span>
-                    <span><a class="link_style" href="#">YouTube</a></span>
+                    <span><a class="link_style" href="{{MY_POST.info.trailer}}">YouTube</a></span>
                   </div>
                   <div class="col-3"><span></span><span></span></div>
                   <div class="col-3"><span></span><span></span></div>
@@ -215,86 +208,51 @@ Home | Ayroot
                   <div class="col-12">
                     <span class="fw-bold">Gener: </span>
                     <span>
-                      <a class="link_style text-decoration-none" href="#">Action</a>,
-                      <a class="link_style text-decoration-none" href="#">Documentry</a>
+                      {% for gener_item in MY_POST.info.gener %}
+                      <a class="link_style text-decoration-none" href="#">{{gener_item}}</a>,
+                      {% endfor %}
                     </span>
                   </div>
                 </div>
                 <div class="row mt-2">
                   <div class="col-12">
                     <span class="fw-bold">Director: </span>
-                    <span>
-                      <a class="link_style text-decoration-none" href="#">Cristopher Nolan</a>
-                    </span>
+                    {% for gener_item in MY_POST.info.director %}
+                    <a class="link_style text-decoration-none" href="#">{{gener_item}}</a>,
+                    {% endfor %}
                   </div>
                 </div>
                 <div class="row mt-2 ">
                   <div class="col-12">
                     <span class="fw-bold">Stars: </span>
-                    <span>
-                      <a class="link_style text-decoration-none" href="#">Kanu Reeves</a>,
-                      <a class="link_style text-decoration-none" href="#">Johny Deep</a>
-                    </span>
+                    {% for gener_item in MY_POST.info.stars %}
+                    <a class="link_style text-decoration-none" href="#">{{gener_item}}</a>,
+                    {% endfor %}
                   </div>
                 </div>
               </div>
             </div>
             <div class="row download-section mt-4">
               <div class="col-12">
-
+                {% for release in MY_POST.releases %}
                 <div class="row row-single-rls mt-2">
                   <div class="release-name">
-                    <span>Release Name: </span><span>Schumacher.2021.WEBRip.x264-ION10</span>
+                    <span>Release Name: </span><span>{{release.release_name}}</span>
                   </div>
                   <div class="info">
-                    <div><span>Size: </span> <span>1.07GB</span></div>
-                    <div><span>Video: </span><span>MP4</span></div>
-                    <div><span>Audio: </span><span>English</span></div>
-                    <div><span>Runtime: </span><span>1 h 52 min</span></div>
+                    <div><span>Size: </span> <span>{{release.size}}</span></div>
+                    <div><span>Video: </span><span>{{release.video}}</span></div>
+                    <div><span>Audio: </span><span>{{release.audio}}</span></div>
+                    <div><span>Runtime: </span><span>{{release.run_time}}</span></div>
                   </div>
                   <div class="download-links">
                     <span>Links:</span>
-                    <span><a href="#">FREE</a></span> – <span><a href="#">NiTROFLARE</a></span> – <span><a
-                        href="#">RAPiDGATOR</a></span>
+                    <span><a href="{{release.links.uploadgig}}">FREE</a></span> – <span><a href="{{release.links.nitro}}">NiTROFLARE</a></span> – <span><a
+                        href="{{release.links.rapidgator}}">RAPiDGATOR</a></span>
                   </div>
                 </div>
                 <hr>
-
-                <div class="row row-single-rls mt-2">
-                  <div class="release-name">
-                    <span>Release Name: </span><span>Schumacher.2021.WEBRip.x264-ION10</span>
-                  </div>
-                  <div class="info">
-                    <div><span>Size: </span> <span>1.07GB</span></div>
-                    <div><span>Video: </span><span>MP4</span></div>
-                    <div><span>Audio: </span><span>English</span></div>
-                    <div><span>Runtime: </span><span>1 h 52 min</span></div>
-                  </div>
-                  <div class="download-links">
-                    <span>Links:</span>
-                    <span><a href="#">FREE</a></span> – <span><a href="#">NiTROFLARE</a></span> – <span><a
-                        href="#">RAPiDGATOR</a></span>
-                  </div>
-                </div>
-                <hr>
-
-                <div class="row row-single-rls mt-2">
-                  <div class="release-name">
-                    <span>Release Name: </span><span>Schumacher.2021.WEBRip.x264-ION10</span>
-                  </div>
-                  <div class="info">
-                    <div><span>Size: </span> <span>1.07GB</span></div>
-                    <div><span>Video: </span><span>MP4</span></div>
-                    <div><span>Audio: </span><span>English</span></div>
-                    <div><span>Runtime: </span><span>1 h 52 min</span></div>
-                  </div>
-                  <div class="download-links">
-                    <span>Links:</span>
-                    <span><a href="#">FREE</a></span> – <span><a href="#">NiTROFLARE</a></span> – <span><a
-                        href="#">RAPiDGATOR</a></span>
-                  </div>
-                </div>
-
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -302,11 +260,12 @@ Home | Ayroot
         <div class="card-footer">
           <div class="row">
             <div class="col-6">Comments:30</div>
-            <div class="col-6 d-flex justify-content-end"><a href="#">View Post ></a></div>
+            <div class="col-6 d-flex justify-content-end"><a class="link_style text-decoration-none" href="{{POST.slug}}">View Post ></a></div>
           </div>
         </div>
       </div>
-    </div>
+    </div>{% endfor %}
+    
 
     <!-- TV TABLE SIDEBAR -->
     <div class="col-12 col-lg-5 mb-5">
