@@ -15,12 +15,12 @@ class Category(models.Model):
     )
     parent = models.ForeignKey(
         "self",
-        verbose_name=_("Parent"),
-        related_query_name="child",
+        verbose_name=(_("Parent")),
+        related_name="children",
+        related_query_name="children",
         on_delete=models.SET_NULL,
-        blank=True,
         null=True,
-        default="self",
+        blank=True,
     )
     create_at = models.DateTimeField(_("Create at"), auto_now_add=True)
     update_at = models.DateTimeField(_("Update at"), auto_now=True)
@@ -43,13 +43,15 @@ class Post(models.Model):
     slug = models.SlugField(
         _("Slug"),
         blank=True,
+        null=True,
         unique=True,
     )
     content = models.TextField(_("Post Content"))
     category = models.ManyToManyField(
-        "Category",
-        related_name="posts",
-        verbose_name=_("Category"),
+        Category,
+        verbose_name=(_("category")),
+        related_name="category",
+        related_query_name="category",
         blank=True,
     )
     create_at = models.DateTimeField(_("Publish at"), auto_now_add=True)
@@ -73,3 +75,6 @@ class Post(models.Model):
         )
 
     display_category.short_description = "Category"
+
+
+
