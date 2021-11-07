@@ -14,7 +14,7 @@ Home | Ayroot
       <div>
         <ul class="nav nav-tabs mx-2" id="myTab2" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="movies-tab" data-bs-toggle="tab" data-bs-target="#movies" type="button"
+            <button class="nav-link active" id="movies-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button"
               role="tab" aria-controls="monday" aria-selected="true">Movies</button>
           </li>
           <li class="nav-item" role="presentation">
@@ -26,7 +26,7 @@ Home | Ayroot
               role="tab" aria-controls="music" aria-selected="true">Music</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link " id="mag-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+            <button class="nav-link " id="mag-tab" data-bs-toggle="tab" data-bs-target="#mag" type="button" role="tab"
               aria-controls="mag" aria-selected="true">Magazines</button>
           </li>
           <li class="nav-item" role="presentation">
@@ -34,12 +34,12 @@ Home | Ayroot
               aria-controls="game" aria-selected="true">Games</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link " id="sunday-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab"
+            <button class="nav-link " id="sunday-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab"
               aria-controls="tv" aria-selected="true">Applications</button>
           </li>
         </ul>
         <div class="tab-content p-2" id="myTabContent2">
-          <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="movie-tab">
+          <div class="tab-pane fade show active" id="movie" role="tabpanel" aria-labelledby="movie-tab">
             <img class="img-fluid" src="{%static 'covers/Cover1.png'%}" alt="">
             <img class="img-fluid" src="{%static 'covers/Cover2.png'%}" alt="">
             <img class="img-fluid" src="{%static 'covers/Cover3.png'%}" alt="">
@@ -154,118 +154,29 @@ Home | Ayroot
 <!-- end -->
 
 <!-- SINGLE POST -->
-{% for POST in posts %}
+
 <div class="container px-0 shadow-sm mt-4">
   <div class="row d-flex flex-column-reverse flex-lg-row">
+
     <!-- single post -->
     <div class="col-12 col-lg-7">
-      <!-- post area -->
-      <div class="container bg-custom p-0">
-        <div class="card card-custom mb-3">
-          <div class="card-header">
-            <span class="post-title">
-              <h6 class="mb-0 p-2 "><a class="link_style text-decoration-none" href="{{POST.slug}}">{{POST.title}}</a></h6>
-            </span>
-
-
-          </div>
-          <div class="card-body pt-1">
-            <div class="row mb-4 card-hashtags text-muted">
-              <div class="col-12">
-                <span class="post-date small mx-2"><i class="fa fa-calendar-check-o"
-                    aria-hidden="true"></i>{{POST.create_at}} </span>
-                {% for item_cat in POST.category.all %}
-                <a href="" class="link_style text-decoration-none">
-                  <span class="">#{{item_cat}}</span>
-                </a>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="row post-content d-flex flex-column flex-lg-row mt-2">
-              <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center"><img class="img-fluid"
-                  src="{{MY_POST.info.cover}}" alt=""></div>
-              <div class="col-12 col-lg-9">
-                <div class="row">
-                  <div class="col-12">
-                    <span class="fw-bold">Pilot:</span>
-                    <p class="d-inline">Followed by millions worldwide. His strong will and triumphant fight to win
-                      against all odds put Michael Schumacher at the centre of global attention.
-                      <span id="dots">...</span>
-                      <span id="more">{{MY_POST.info.pilot}}</span>
-                    </p><a class="" onclick="myFunction()" id="myBtn">Read more</a>
-                  </div>
-                </div>
-                <div class="row mt-2">
-                  <div class="col-3"><span class="text-warning">iMDB: </span><span>{{MY_POST.info.imdb}}/10</span></div>
-                  <div class="col-3">
-                    <span class="text-danger">Trailer: </span>
-                    <span><a class="link_style" href="{{MY_POST.info.trailer}}">YouTube</a></span>
-                  </div>
-                  <div class="col-3"><span></span><span></span></div>
-                  <div class="col-3"><span></span><span></span></div>
-                </div>
-                <div class="row mt-2">
-                  <div class="col-12">
-                    <span class="fw-bold">Gener: </span>
-                    <span>
-                      {% for gener_item in MY_POST.info.gener %}
-                      <a class="link_style text-decoration-none" href="#">{{gener_item}}</a>,
-                      {% endfor %}
-                    </span>
-                  </div>
-                </div>
-                <div class="row mt-2">
-                  <div class="col-12">
-                    <span class="fw-bold">Director: </span>
-                    {% for gener_item in MY_POST.info.director %}
-                    <a class="link_style text-decoration-none" href="#">{{gener_item}}</a>,
-                    {% endfor %}
-                  </div>
-                </div>
-                <div class="row mt-2 ">
-                  <div class="col-12">
-                    <span class="fw-bold">Stars: </span>
-                    {% for gener_item in MY_POST.info.stars %}
-                    <a class="link_style text-decoration-none" href="#">{{gener_item}}</a>,
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row download-section mt-4">
-              <div class="col-12">
-                {% for release in MY_POST.releases %}
-                <div class="row row-single-rls mt-2">
-                  <div class="release-name">
-                    <span>Release Name: </span><span>{{release.release_name}}</span>
-                  </div>
-                  <div class="info">
-                    <div><span>Size: </span> <span>{{release.size}}</span></div>
-                    <div><span>Video: </span><span>{{release.video}}</span></div>
-                    <div><span>Audio: </span><span>{{release.audio}}</span></div>
-                    <div><span>Runtime: </span><span>{{release.run_time}}</span></div>
-                  </div>
-                  <div class="download-links">
-                    <span>Links:</span>
-                    <span><a href="{{release.links.uploadgig}}">FREE</a></span> – <span><a href="{{release.links.nitro}}">NiTROFLARE</a></span> – <span><a
-                        href="{{release.links.rapidgator}}">RAPiDGATOR</a></span>
-                  </div>
-                </div>
-                <hr>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <div class="row">
-            <div class="col-6">Comments:30</div>
-            <div class="col-6 d-flex justify-content-end"><a class="link_style text-decoration-none" href="{{POST.slug}}">View Post ></a></div>
-          </div>
-        </div>
-      </div>
-    </div>{% endfor %}
-    
+      {% for POST in posts %}
+        <!-- post area -->
+        {%if POST.category.0 == "tv show" %}
+            {% include "theme/Post_templates/TvShow.html" %}
+        {% elif POST.category.0 == "movie" %}
+            {% include "theme/Post_templates/Movie.html" %}
+        {% elif POST.category.0 == "game" %}
+            {% include "theme/Post_templates/Game.html" %}
+        {% elif POST.category.0 == "music" %}
+            {% include "theme/Post_templates/Music.html" %}            
+        {% elif POST.category.0 == "application" %}
+            {% include "theme/Post_templates/App.html" %} 
+        {% elif POST.category.0 == "magazine" %}
+            {% include "theme/Post_templates/Mag.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
 
     <!-- TV TABLE SIDEBAR -->
     <div class="col-12 col-lg-5 mb-5">
