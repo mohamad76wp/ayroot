@@ -1,0 +1,69 @@
+<div class="container bg-custom p-0 mb-5 ">
+    <div class="card card-custom ">
+      <div class="card-header">
+        <span class="post-title">
+          <h6 class="mb-0 p-2 "><a class="link_style text-decoration-none fw-bold" href="{{POST.slug}}">{{POST.title}}</a></h6>
+        </span>
+
+
+      </div>
+      <div class="card-body pt-1">
+        <div class="row mb-4 card-hashtags text-muted">
+          <div class="col-12">
+            <span class="post-date small mx-2"><i class="fa fa-calendar-check-o"
+                aria-hidden="true"></i>{{POST.create_at}} </span>
+            {% for item_cat in POST.category %}
+                <span class=""><a href="" class="link_style text-decoration-none">#{{item_cat}}</a></span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="row post-content d-flex flex-column flex-lg-row mt-2">
+          <div class="col-12 mb-3 d-flex justify-content-center align-items-center "><img class="img-fluid"
+              src="{{POST.info.cover}}" alt="{{POST.title}}">
+          </div>
+            <div class="mt-3">
+              <span class="fw-bold">
+                  Description:
+              </span>
+              <p class=" d-inline">
+                {{POST.info.description}}
+              </p>
+            </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-4 px-1 d-flex justify-content-end align-items-center  "><i class="fa fa-cloud-download" aria-hidden="true"></i></div>
+          <div class="col-4 px-0"><hr></div>
+          <div class="col-4 px-1 d-flex justify-content-start align-items-center "><i class="fa fa-cloud-download" aria-hidden="true"></i></div>
+        </div>
+        <div class="row download-section ">
+          <div class="col-12">
+            {% for release in POST.releases %}
+            <div class="row row-single-rls mt-2">
+              <div class="release-name">
+                <span class="pastel-color">Release Name: </span><span class="">{{release.release_name}}</span>
+              </div>
+              <div class="info">
+                <div><span>Size: </span> <span>{{release.size}}</span></div>
+                <div><span>Language: </span> <span>{{POST.info.language}}</span></div>
+                <div><span>Format: </span> <span>{{POST.info.format}}</span></div>
+                <div><span>Page: </span> <span>{{POST.info.pages}} Page</span></div>
+              </div>
+              <div class="download-links">
+                <span>Links:</span>
+                <span><a href="{{release.links.uploadgig}}">FREE</a></span> – <span><a href="{{release.links.nitro}}">NiTROFLARE</a></span> – <span><a
+                    href="{{release.links.rapidgator}}">RAPiDGATOR</a></span>
+              </div>
+            </div>
+            <hr>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-6">Comments: 30</div>
+        <div class="col-6 d-flex justify-content-end"><a class="link_style text-decoration-none" href="{{POST.slug}}">View Post >></a></div>
+      </div>
+    </div>
+  </div>
