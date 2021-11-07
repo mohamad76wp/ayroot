@@ -9,13 +9,32 @@
     display: none;
 }
 
-#myBtn {
+#myBtn,.green-color {
     color: #86C232;
+}
+
+.pastel-color{
+    color: #FF7171;
 }
 
 
 a {
+    color: #86C232;
+}
+
+a:hover {
     color: #8ab4f8;
+}
+
+
+.a-other{
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+.a-other:hover{
+    color: #86C232;
+    text-decoration:underline
 }
 
 body {
@@ -127,5 +146,14 @@ body {
     border-radius: .25rem
 }
 
+
+/* end */
+
+
+/* Appliction image style */
+
+.cust-mx-width{
+    max-width: 200px !important; 
+}
 
 /* end */
